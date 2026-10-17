@@ -40,6 +40,8 @@
 
   --stage-rejected-bg: #ffe4e6;
   --stage-rejected-text: #9f1239;
+  --stage-rejected-col-bg: linear-gradient(180deg, rgba(254, 226, 226, 0.45) 0%, rgba(255, 241, 242, 0.2) 35%, var(--bg-subtle) 100%);
+  --stage-rejected-col-border: #fecdd3;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -394,13 +396,49 @@ body {
   flex-direction: column;
   gap: 12px;
   min-height: 480px;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .kanban-col.drag-over {
   background-color: #eff6ff;
   border-color: var(--primary);
   border-style: dashed;
+}
+
+/* Rejected Column Theme (Subtle UX gradient cue) */
+.kanban-col.kanban-col-rejected,
+.kanban-col[data-stage="rejected"] {
+  background: var(--stage-rejected-col-bg);
+  border-color: var(--stage-rejected-col-border);
+}
+
+.kanban-col.kanban-col-rejected .col-header,
+.kanban-col[data-stage="rejected"] .col-header {
+  border-bottom-color: var(--stage-rejected-col-border);
+}
+
+.kanban-col.kanban-col-rejected .col-header h3,
+.kanban-col[data-stage="rejected"] .col-header h3 {
+  color: var(--stage-rejected-text);
+}
+
+.kanban-col.kanban-col-rejected .badge-count,
+.kanban-col[data-stage="rejected"] .badge-count {
+  background: #ffffff;
+  border-color: var(--stage-rejected-col-border);
+  color: var(--stage-rejected-text);
+}
+
+.kanban-col.kanban-col-rejected.drag-over,
+.kanban-col[data-stage="rejected"].drag-over {
+  background: linear-gradient(180deg, rgba(254, 205, 211, 0.5) 0%, rgba(255, 228, 230, 0.3) 100%);
+  border-color: #f43f5e;
+  border-style: dashed;
+}
+
+.kanban-col.kanban-col-rejected .job-card:hover,
+.kanban-col[data-stage="rejected"] .job-card:hover {
+  border-color: #fca5a5;
 }
 
 .col-header {

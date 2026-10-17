@@ -183,7 +183,7 @@
       <main id="view-board" class="view-container active">
         <div class="kanban-board">
           <!-- Applied -->
-          <div class="kanban-col">
+          <div class="kanban-col" data-stage="applied">
             <div class="col-header">
               <h3>Applied</h3>
               <span class="badge-count" id="count-applied">0</span>
@@ -192,7 +192,7 @@
           </div>
 
           <!-- Interviewing -->
-          <div class="kanban-col">
+          <div class="kanban-col" data-stage="interviewing">
             <div class="col-header">
               <h3>Interviewing</h3>
               <span class="badge-count" id="count-interviewing">0</span>
@@ -204,7 +204,7 @@
           </div>
 
           <!-- Offer -->
-          <div class="kanban-col">
+          <div class="kanban-col" data-stage="offer">
             <div class="col-header">
               <h3>Offer</h3>
               <span class="badge-count" id="count-offer">0</span>
@@ -213,7 +213,7 @@
           </div>
 
           <!-- Accepted -->
-          <div class="kanban-col">
+          <div class="kanban-col" data-stage="accepted">
             <div class="col-header">
               <h3>Accepted 🎉</h3>
               <span class="badge-count" id="count-accepted">0</span>
@@ -222,7 +222,7 @@
           </div>
 
           <!-- Rejected -->
-          <div class="kanban-col">
+          <div class="kanban-col kanban-col-rejected" data-stage="rejected">
             <div class="col-header">
               <h3>Rejected</h3>
               <span class="badge-count" id="count-rejected">0</span>
