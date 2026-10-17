@@ -51,7 +51,7 @@ Job Tracker/
 1. Open your terminal in the project directory:
 
    ```bash
-   cd "C:\Users\joseph.nzomo\Desktop\Job Tracker"
+   cd "C:\Users\user\Desktop\Job Tracker"
    ```
 
 2. Start a local server:
